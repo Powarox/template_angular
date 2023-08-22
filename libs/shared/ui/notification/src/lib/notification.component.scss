@@ -1,0 +1,56 @@
+.notifications {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  min-width: 400px;
+  max-width: 400px;
+
+  .notification {
+    margin: 5px;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+
+    .close-button-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      margin: 5px;
+    }
+
+    .title {
+      padding-left: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      font-weight: bold;
+    }
+
+    .message {
+      padding: 10px;
+      padding-right: 32px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &.info {
+      background-color: rgba(189, 189, 189, 0.9);
+    }
+
+    &.success {
+      background-color: #34d399;
+      // background-color: rgba(27, 158, 119, 0.9);
+      // background-color: var(--sny-theme-green-500);
+    }
+
+    &.warning {
+      background-color: rgba(217, 95, 2, 0.9);
+    }
+
+    &.error {
+      background-color: #ef4444;
+      // background-color: rgba(246, 71, 71, 0.9);
+      // background-color: var(--sny-theme-red-600);
+    }
+  }
+}

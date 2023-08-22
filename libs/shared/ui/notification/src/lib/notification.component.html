@@ -1,0 +1,17 @@
+<div class="notifications">
+    <div *ngFor="let notification of notifications" class="notification" [ngClass]="className(notification)">
+        <div class="close-button-container">
+            <button mat-icon-button (click)="close(notification)" class="close-button">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </div>
+
+        <div class="message">
+            {{ notification.message }}
+        </div>
+    </div>
+</div>
+
+<!-- <div class="title" fxLayout="row" fxLayoutAlign="space-between center">
+  <div>{{notification.title}}</div>
+</div> -->

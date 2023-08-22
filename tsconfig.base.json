@@ -15,9 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@powa/admin/home": ["libs/admin/home/src/index.ts"],
       "@powa/admin/layout": ["libs/admin/layout/src/index.ts"],
       "@powa/admin/shell": ["libs/admin/shell/src/index.ts"],
-      "@powa/admin/home": ["libs/admin/home/src/index.ts"]
+      "@powa/shared/services": ["libs/shared/services/src/index.ts"],
+      "@powa/shared/ui/notification": ["libs/shared/ui/notification/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
