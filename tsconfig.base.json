@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@powa/admin/layout": ["libs/admin/layout/src/index.ts"],
+      "@powa/admin/shell": ["libs/admin/shell/src/index.ts"],
+      "@powa/admin/home": ["libs/admin/home/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
