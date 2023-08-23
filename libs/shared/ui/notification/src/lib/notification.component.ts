@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./notification.component.scss'],
 })
 export class NotificationComponent implements OnInit, OnDestroy {
-  notifications: Notification[] = [];
+  public notifications: Notification[] = [];
   private _subscription!: Subscription;
 
   constructor(
@@ -19,7 +19,9 @@ export class NotificationComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this._subscription = this._notificationSvc
       .getObservable()
-      .subscribe((notification) => this._addNotification(notification));
+      .subscribe((notification) =>
+        this._addNotification(notification)
+      );
   }
 
   ngOnDestroy() {
@@ -28,7 +30,6 @@ export class NotificationComponent implements OnInit, OnDestroy {
 
   private _addNotification(notification: Notification) {
     this.notifications.push(notification);
-
     if (notification.timeout !== 0) {
       setTimeout(() => this.close(notification), notification.timeout);
     }
